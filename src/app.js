@@ -16,10 +16,10 @@ app.use(cors());
 mongoose.connect("mongodb://localhost:27017/nodeapi", { useNewUrlParser: true });
 requireDir("./src/model");
 
-// inserir novos valores, atualizar, deletar ou buscar
-// const Produto = mongoose.model("Produto");
-
-// importando o "rotas.js", e vai receber todas as requisições
-app.use('/api', require('./src/rotas'));
+// ROTAS ===============================================
+// Incluindo nossas rotas definidas no arquivo routes/index.js
+var index = require('./routes/rotas');
+// definindo nossas rotas na aplicação
+app.use('/', index);
 
 app.listen(3000);
