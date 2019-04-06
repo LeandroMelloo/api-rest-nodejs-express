@@ -8,7 +8,7 @@ const app = express();
 // envie dados no formato Json
 app.use(express.json());
 
-// cors disponibiliza acesso a API para ser acessada publicamente
+// cors disponibiliza acesso a API para ser acessada publicamente.
 app.use(cors());
 
 // Iniciando DB
